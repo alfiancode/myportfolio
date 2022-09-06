@@ -3,9 +3,11 @@ import "./App.css";
 function App() {
   return (
     <>
-      <button className="btn btn-xl btn-primary rounded-none drop-shadow-none">
-        tes{" "}
-      </button>
+      <div className="h-screen">
+        <button className="btn btn-xl btn-primary rounded-none drop-shadow-none flex m-auto justi">
+          tes{" "}
+        </button>
+      </div>
     </>
   );
 }
