@@ -1,8 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <>s</>;
+  return (
+    <>
+      <button className="btn btn-xl btn-primary rounded-none drop-shadow-none">
+        tes{" "}
+      </button>
+    </>
+  );
 }
 
 export default App;
