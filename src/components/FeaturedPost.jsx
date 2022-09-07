@@ -47,6 +47,14 @@ const FeaturedPost = () => {
         </div>
       </div>
       {/* end card */}
+      {/* <a href="#" className="mt-6 text-gray-600  ">
+        Read all posts ➡️
+      </a> */}
+
+      <button className="btn btn-outline border-none hover:bg-white hover:text-gray-500">
+        {" "}
+        Read all posts ➡️
+      </button>
     </div>
   );
 };
