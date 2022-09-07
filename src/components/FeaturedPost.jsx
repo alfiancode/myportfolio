@@ -8,28 +8,41 @@ const FeaturedPost = () => {
       <div className="flex  flex-col mb-6">
         <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
           <div className="flex flex-col justify-between h-full bg-white  rounded-lg p-5 overflow-hidden">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <h4 className="text-lg font-medium mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h4>
+            <div className="flex items-center text-gray-500">
+              👀 1000x watch
+            </div>
           </div>
         </div>
       </div>
       <div className="flex  flex-col mb-6">
-        <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#D8B4FE]  to-[#818CF8]">
+        <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#fde635] via-[#04d9ff] to-[#6ee193]">
           <div className="flex flex-col justify-between h-full bg-white  rounded-lg p-5 overflow-hidden">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            facere, error suscipit unde blanditiis assumenda ex!
+            <h4 className="text-lg font-medium mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem,
+              ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              laborum!
+            </h4>
+            <div className="flex items-center text-gray-500">
+              👀 1000x watch
+            </div>
           </div>
         </div>
       </div>
-
       <div className="flex  flex-col mb-6">
-        <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]">
+        <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#866ee7] via-[#f63bed] to-[#dc5252]">
           <div className="flex flex-col justify-between h-full bg-white  rounded-lg p-5 overflow-hidden">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            facere, error suscipit unde blanditiis assumenda ex! Quisquam
-            voluptates, quod, quia, quas voluptate quibusdam voluptatem
+            <h4 className="text-lg font-medium mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus
+              molestiae, impedit aperiam possimus est accusamus non explicabo
+              voluptates ipsam.
+            </h4>
+            <div className="flex items-center text-gray-500">
+              👀 1000x watch
+            </div>
           </div>
         </div>
       </div>
