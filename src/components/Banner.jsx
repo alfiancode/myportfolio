@@ -2,20 +2,19 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className=" mt-16 px-8 flex flex-col  ">
+    <div className=" mt-16  flex flex-col  ">
       <div className="avatar mb-8">
         <div className="w-16 h-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           <img src="https://placeimg.com/192/192/people" />
         </div>
       </div>
-      <h1 className="font-bold text-3xl mb-1">Muhamamd AlfianS</h1>
-      <p className="text-gray-500 mb-4">Frontend Developer</p>
+      <h1 className="font-bold text-4xl mb-1">Muhamamd AlfianS</h1>
+      <p className="text-gray-700 mb-4">Frontend Developer</p>
       <p className="text-gray-400 ">
-        build a responsive website from the heart for you. because the one from
-        the heart will never be bad
+        Build a responsive website from the heart for you.
       </p>
       <p className="text-gray-400 mb-16">
-        BVecause the one from the heart will never be bad ❤️
+        Because the one from the heart will never be bad ❤️
       </p>
     </div>
   );
