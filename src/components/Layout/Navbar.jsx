@@ -3,7 +3,7 @@ import ToogleTheme from "../ToogleTheme";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 p-0">
+    <div className="navbar bg-base-100 p-8">
       <div className="navbar-start md:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
