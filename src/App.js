@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Layout from "./components/Layout/Layout";
 import GuestBook from "./pages/GuestBook";
-
+import Blog from "./pages/Blog";
+import Project from "./pages/Project";
 function App() {
   return (
     <div>
@@ -34,6 +35,25 @@ function App() {
             </Layout>
           }
         />
+
+        <Route
+          path="/blog"
+          element={
+            <Layout>
+              <Blog />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/project"
+          element={
+            <Layout>
+              <Project />
+            </Layout>
+          }
+        />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </div>
   );
