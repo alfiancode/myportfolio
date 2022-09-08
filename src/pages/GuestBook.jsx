@@ -5,16 +5,20 @@ import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
+  const [name, setName] = useState();
+  console.log(user.displayName);
   // auth with firebase google
-  const signInWithPopupGoogle = () => {
+  const signInWithPopupGoogle = async () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log("ini result ", result);
+        console.log(result.user.displayName);
+        setName(result.user.displayName);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   // end auth with firebase google
 
   const [isLogin, setIsLogin] = useState(false);
@@ -56,14 +60,20 @@ const GuestBook = () => {
             Sign in with Google
           </button>
         ) : (
-          <div className="flex ">
-            <input
-              type="text"
-              placeholder="Type here"
-              className="input input-md input-primary  w-full max-w-sm border-none mr-5"
-            />
-            <div className="btn  bg-slate-200 hover:bg-slate-300 border-none text-gray-700 normal-case rounded-xl">
-              Sign👉🏻
+          <div>
+            <p className="my-3 ">
+              {" "}
+              Halo <span className="font-bold">{user.displayName}</span> 👋
+            </p>
+            <div className="flex ">
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-md input-primary  w-full max-w-sm border-none mr-5"
+              />
+              <div className="btn  bg-slate-200 hover:bg-slate-300 border-none text-gray-700 normal-case rounded-xl">
+                Sign👉🏻
+              </div>
             </div>
           </div>
         )}
