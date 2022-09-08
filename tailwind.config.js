@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["inter", "sans-serif"],
+        serif: ["Courier Prime", "monospace"],
       },
     },
   },

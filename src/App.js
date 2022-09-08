@@ -17,7 +17,14 @@ function App() {
             </Layout>
           }
         />
-        <Route path="about" element={<About />} />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <About />
+            </Layout>
+          }
+        />
       </Routes>
     </div>
   );
