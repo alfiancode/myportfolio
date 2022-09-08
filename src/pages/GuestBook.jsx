@@ -5,15 +5,11 @@ import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
-  const [name, setName] = useState();
-  console.log(user.displayName);
+
   // auth with firebase google
   const signInWithPopupGoogle = async () => {
     signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log(result.user.displayName);
-        setName(result.user.displayName);
-      })
+      .then((result) => {})
       .catch((error) => {
         console.log(error);
       });
