@@ -31,7 +31,7 @@ const About = () => {
       </div>
 
       {/* 2 */}
-      <div className="mockup-code mx-8 mb-8 p-3 ">
+      <div className="mockup-code mx-8 mb-8 p-3  ">
         <pre className="" data-prefix=">">
           <code className="  font-thin text-3xl tracking-wide font-serif ">
             Tools and Technologies I use ⚙️
@@ -39,21 +39,38 @@ const About = () => {
         </pre>
         <pre data-prefix=">" className="font-serif">
           <code>
-            JavaScript | React | HTML5 | CSS3 | Bootstrap | Material UI |
+            👨‍💻 JavaScript | React | HTML5 | CSS3 | Bootstrap | Material UI |
             Tailwind
           </code>
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">now living in Jakarta.Id</code>
+          <code className="">
+            💻 Github | npm | API Requests | JSON | Custom React Hooks | Strapi
+            | Firebase
+          </code>
+        </pre>
+
+        <pre data-prefix=">" className="text-success">
+          <code>Done!</code>
+        </pre>
+      </div>
+
+      {/* 3 */}
+
+      <div className="mockup-code mx-8 mb-8 p-3 ">
+        <pre className="" data-prefix=">">
+          <code className="  font-thin text-3xl tracking-wide font-serif ">
+            Hobbies/interests 🎯
+          </code>
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">Working 9 to 5 in the tax office</code>
+          <code>📚Reading</code>
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">become a front end developer at night</code>
+          <code className="">💻 Games</code>
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">write code from heart ❤️</code>
+          <code className="">🎥 movies</code>
         </pre>
         <pre data-prefix=">" className="text-success">
           <code>Done!</code>
