@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ToogleTheme from "../ToogleTheme";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 p-8">
+      {/* navbar PHONE */}
       <div className="navbar-start md:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -24,10 +26,10 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 "
           >
             <li>
-              <a>Home</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <a>About</a>
@@ -44,6 +46,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      {/*  END navbar PHONE */}
 
       <div className="navbar-center hidden md:flex ">
         <a className="btn btn-ghost normal-case text-lg">Home</a>
