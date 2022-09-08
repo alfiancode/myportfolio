@@ -4,8 +4,8 @@ import CardGuestBook from "../components/CardGuestBook";
 const GuestBook = () => {
   return (
     <div className="mx-8">
-      <h1 className="font-bold text-3xl tracking-tight mb-4">Guestbok</h1>
-      <p className="text-gray-400 mb-6">
+      <h1 className="font-bold text-3xl tracking-tight mb-4"> 📝 Guestbok</h1>
+      <p className=" mb-6">
         Leave a comment below. It could be anything – appreciation, information,
         wisdom, or even humor. Surprise me!
       </p>

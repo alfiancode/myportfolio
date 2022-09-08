@@ -3,7 +3,7 @@ import React from "react";
 const FeaturedPost = () => {
   return (
     <div>
-      <h3 className="font-bold text-2xl mb-6 "> Featured Post </h3>
+      <h3 className="font-bold text-2xl mb-6 "> 💡 Featured Post </h3>
       {/* card  */}
       <div className="flex  flex-col mb-6">
         <div className=" transform hover:scale-[1.02] transition-all rounded-xl w-full h-full mx-auto bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
