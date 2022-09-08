@@ -1,4 +1,5 @@
 import React from "react";
+import CardGuestBook from "../components/CardGuestBook";
 
 const GuestBook = () => {
   return (
@@ -8,7 +9,7 @@ const GuestBook = () => {
         Leave a comment below. It could be anything – appreciation, information,
         wisdom, or even humor. Surprise me!
       </p>
-      <div className="p-6 min-w-full rounded-lg border border-blue-300 bg-[rgb(239,246,255)] ">
+      <div className="p-6 min-w-full rounded-lg border border-blue-300 bg-[rgb(239,246,255)] mb-8">
         <h5 className="text-lg font-bold text-gray-900">Sign the Guestbook</h5>
         <p className="my-1 text-gray-800 ">
           Share a message for a future visitor of my site.
@@ -24,6 +25,16 @@ const GuestBook = () => {
           </div>
         </div>
       </div>
+      <CardGuestBook />
+      <CardGuestBook />
+
+      <CardGuestBook />
+
+      <CardGuestBook />
+
+      <CardGuestBook />
+
+      <CardGuestBook />
     </div>
   );
 };
