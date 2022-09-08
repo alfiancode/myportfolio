@@ -4,7 +4,7 @@ import ToogleTheme from "../ToogleTheme";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 p-8">
+    <div className="navbar bg-base-200 p-8">
       {/* navbar PHONE */}
       <div className="navbar-start md:hidden">
         <div className="dropdown">
@@ -31,17 +31,15 @@ const Navbar = () => {
             <li>
               <Link to="/about">About</Link>
             </li>
+
             <li>
-              <a>About</a>
+              <Link to="/project">Project</Link>
             </li>
             <li>
-              <a>Project</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a>Blog</a>
-            </li>
-            <li>
-              <a>Testimoni</a>
+              <Link to="/GuestBook">GuestBook</Link>
             </li>
           </ul>
         </div>
@@ -49,11 +47,21 @@ const Navbar = () => {
       {/*  END navbar PHONE */}
 
       <div className="navbar-center hidden md:flex ">
-        <a className="btn btn-ghost normal-case text-lg">Home</a>
-        <a className="btn btn-ghost normal-case text-lg">About</a>
-        <a className="btn btn-ghost normal-case text-lg">Project</a>
-        <a className="btn btn-ghost normal-case text-lg">Blog</a>
-        <a className="btn btn-ghost normal-case text-lg">Testimoni</a>
+        <Link to="/" className="btn btn-ghost normal-case text-lg">
+          Home
+        </Link>
+        <Link Link to="/about" className="btn btn-ghost normal-case text-lg">
+          About
+        </Link>
+        <Link to="/project" className="btn btn-ghost normal-case text-lg">
+          Project
+        </Link>
+        <Link to="/Blog" className="btn btn-ghost normal-case text-lg">
+          Blog
+        </Link>
+        <Link to="/GuestBook" className="btn btn-ghost normal-case text-lg">
+          GuestBook
+        </Link>
       </div>
       <div className="navbar-end mr-6">
         <ToogleTheme />
