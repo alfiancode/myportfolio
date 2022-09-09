@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout";
 import GuestBook from "./pages/GuestBook";
 import Blog from "./pages/Blog";
 import Project from "./pages/Project";
+import Tailwind from "./pages/markdown/Tailwind";
 function App() {
   return (
     <div>
@@ -50,6 +51,14 @@ function App() {
           element={
             <Layout>
               <Project />
+            </Layout>
+          }
+        />
+        <Route
+          path="/blog/tailwindcss"
+          element={
+            <Layout>
+              <Tailwind />
             </Layout>
           }
         />
