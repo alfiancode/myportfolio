@@ -12,6 +12,7 @@ const FormGuestbook = () => {
     comment: yup.string().required("Post is required"),
   });
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors },
@@ -28,6 +29,7 @@ const FormGuestbook = () => {
       userId: user?.uid,
       displayName: user?.displayName,
     });
+    reset();
   };
   return (
     <form className="flex " onSubmit={handleSubmit(onCreatePost)}>

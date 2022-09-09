@@ -4,6 +4,7 @@ import { auth, provider } from "../config/Firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import FormGuestbook from "../components/FormGuestbook";
+import Title from "../components/Title";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
 
@@ -21,7 +22,7 @@ const GuestBook = () => {
   const [isLogin, setIsLogin] = useState(false);
   return (
     <div className="mx-8">
-      <h1 className="font-bold text-3xl tracking-tight mb-4"> 📝 Guestbok</h1>
+      <Title title=" 📝 Guestbook" />
       <p className=" mb-6">
         Leave a comment below. It could be anything – appreciation, information,
         wisdom, or even humor. Surprise me!
