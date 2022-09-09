@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../components/Title";
-
+import BlogCard from "../components/BlogCard";
 const Blog = () => {
   return (
     <div className="mx-8">
@@ -28,6 +28,13 @@ const Blog = () => {
           ></path>
         </svg>
       </div>
+      <div className="divider my-16 font-bold"> 💖Happy reading</div>
+      <BlogCard />
+      <BlogCard />
+
+      <BlogCard />
+
+      <BlogCard />
     </div>
   );
 };
