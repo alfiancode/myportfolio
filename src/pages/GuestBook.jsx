@@ -3,16 +3,17 @@ import CardGuestBook from "../components/CardGuestBook";
 import { auth, provider } from "../config/Firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import FormGuestbook from "../components/FormGuestbook";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
 
   // auth with firebase google
   const signInWithPopupGoogle = async () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {})
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // end auth with firebase google
@@ -61,15 +62,8 @@ const GuestBook = () => {
               {" "}
               Halo <span className="font-bold">{user.displayName}</span> 👋
             </p>
-            <div className="flex ">
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-md input-primary  w-full max-w-sm border-none mr-5"
-              />
-              <div className="btn  bg-slate-200 hover:bg-slate-300 border-none text-gray-700 normal-case rounded-xl">
-                Sign👉🏻
-              </div>
+            <div>
+              <FormGuestbook />
             </div>
           </div>
         )}
