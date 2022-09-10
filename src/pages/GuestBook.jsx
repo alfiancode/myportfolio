@@ -5,7 +5,7 @@ import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import FormGuestbook from "../components/FormGuestbook";
 import Title from "../components/Title";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
   const [dataGuestBook, setDataGuestBook] = useState([]);
@@ -23,15 +23,18 @@ const GuestBook = () => {
 
   // use state for data guest book with firebase snapshot
   useEffect(() => {
-    onSnapshot(collection(db, "posts"), (snapshot) => {
+    const collectionRef = collection(db, "posts");
+    const q = query(collectionRef, orderBy("createdAt", "desc"));
+    const unsub = onSnapshot(q, (snapshot) => {
       setDataGuestBook(
         snapshot.docs.map((doc) => ({
           data: doc.data(),
         }))
       );
     });
+    return unsub;
   }, []);
-  console.log("data guest book ", dataGuestBook);
+  // console.log("data guest book ", dataGuestBook);
   // end use state for data guest book with firebase snapshot
 
   return (
