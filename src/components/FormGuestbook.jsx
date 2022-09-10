@@ -20,17 +20,22 @@ const FormGuestbook = () => {
     resolver: yupResolver(schema),
   });
 
-  const onCreatePost = async (data) => {
-    console.log("data dari fgb", data);
-    const postsRef = collection(db, "posts");
-    const payload = {
-      comment: data.comment,
-      createdAt: serverTimestamp(),
-      userId: user?.uid,
-      displayName: user?.displayName,
-    };
-    const addDocFirebase = await addDoc(postsRef, payload);
-    addDocFirebase();
+  const onCreatePost = async (data, e) => {
+    try {
+      const postsRef = collection(db, "posts");
+      const payload = {
+        comment: data.comment,
+        createdAt: serverTimestamp(),
+        userId: user?.uid,
+        displayName: user?.displayName,
+      };
+      const addDocFirebase = await addDoc(postsRef, payload);
+      addDocFirebase(reset());
+
+      console.log(e.target.value);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

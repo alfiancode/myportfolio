@@ -8,7 +8,7 @@ import Title from "../components/Title";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
-  const [dataGuestBook, setDataGuestBook] = useState();
+  const [dataGuestBook, setDataGuestBook] = useState([]);
 
   // auth with firebase google
   const signInWithPopupGoogle = async () => {
