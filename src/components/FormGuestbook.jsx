@@ -23,12 +23,13 @@ const FormGuestbook = () => {
 
   const onCreatePost = async (data) => {
     console.log("data dari fgb", data);
-    await addDoc(postsRef, {
+    const addDocFirebase = await addDoc(postsRef, {
       comment: data.comment,
       createdAt: serverTimestamp(),
       userId: user?.uid,
       displayName: user?.displayName,
     });
+    addDocFirebase();
     reset();
   };
   return (
