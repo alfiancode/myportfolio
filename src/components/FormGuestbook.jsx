@@ -2,12 +2,12 @@ import React from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db, auth } from "../config/Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 const FormGuestbook = () => {
   const [user] = useAuthState(auth);
-  console.log(new Date());
+
   const schema = yup.object().shape({
     comment: yup.string().required("Post is required"),
   });
@@ -25,7 +25,7 @@ const FormGuestbook = () => {
     console.log("data dari fgb", data);
     await addDoc(postsRef, {
       comment: data.comment,
-      createdAt: new Date(),
+      createdAt: serverTimestamp(),
       userId: user?.uid,
       displayName: user?.displayName,
     });
