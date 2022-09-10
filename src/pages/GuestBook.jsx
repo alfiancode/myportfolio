@@ -23,18 +23,23 @@ const GuestBook = () => {
 
   // use state for data guest book with firebase snapshot
   useEffect(() => {
-    const collectionRef = collection(db, "posts");
-    const q = query(collectionRef, orderBy("createdAt", "desc"));
-    const unsub = onSnapshot(q, (snapshot) => {
-      setDataGuestBook(
-        snapshot.docs.map((doc) => ({
-          data: doc.data(),
-        }))
-      );
-    });
-    return unsub;
+    try {
+      const collectionRef = collection(db, "posts");
+      const q = query(collectionRef, orderBy("createdAt", "asc"));
+      const unsub = onSnapshot(q, (snapshot) => {
+        console.log(snapshot.docs);
+        setDataGuestBook(
+          snapshot.docs.map((doc) => ({
+            data: doc.data(),
+          }))
+        );
+      });
+      return unsub;
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
-  // console.log("data guest book ", dataGuestBook);
+
   // end use state for data guest book with firebase snapshot
 
   return (
@@ -89,10 +94,11 @@ const GuestBook = () => {
       {/* map cardguestbook with data  */}
       {dataGuestBook.map((item, index) => (
         <CardGuestBook
+          createdAt={item.data.createdAt}
           displayName={item.data.displayName}
           comment={item.data.comment}
-          createdAt={item.data.createdAt}
-          key={item.data.userId}
+          key={index}
+          uid={item.data.userId}
         />
       ))}
     </div>
