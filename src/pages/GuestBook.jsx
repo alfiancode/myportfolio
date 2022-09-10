@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardGuestBook from "../components/CardGuestBook";
-import { auth, provider } from "../config/Firebase";
+import { auth, db, provider } from "../config/Firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import FormGuestbook from "../components/FormGuestbook";
 import Title from "../components/Title";
+import { collection, onSnapshot } from "firebase/firestore";
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
+  const [dataGuestBook, setDataGuestBook] = useState([]);
 
   // auth with firebase google
   const signInWithPopupGoogle = async () => {
@@ -19,7 +21,19 @@ const GuestBook = () => {
 
   // end auth with firebase google
 
-  const [isLogin, setIsLogin] = useState(false);
+  // use state for data guest book with firebase snapshot
+  useEffect(() => {
+    onSnapshot(collection(db, "posts"), (snapshot) => {
+      setDataGuestBook(
+        snapshot.docs.map((doc) => ({
+          data: doc.data(),
+        }))
+      );
+    });
+  }, []);
+  console.log("data guest book ", dataGuestBook);
+  // end use state for data guest book with firebase snapshot
+
   return (
     <div className="mx-8">
       <Title title=" 📝 Guestbook" />
@@ -69,16 +83,15 @@ const GuestBook = () => {
           </div>
         )}
       </div>
-      <CardGuestBook />
-      <CardGuestBook />
-
-      <CardGuestBook />
-
-      <CardGuestBook />
-
-      <CardGuestBook />
-
-      <CardGuestBook />
+      {/* map cardguestbook with data  */}
+      {dataGuestBook.map((item, index) => (
+        <CardGuestBook
+          displayName={item.data.displayName}
+          comment={item.data.comment}
+          createdAt={item.data.createdAt}
+          key={item.data.userId}
+        />
+      ))}
     </div>
   );
 };
