@@ -25,12 +25,13 @@ const GuestBook = () => {
   useEffect(() => {
     try {
       const collectionRef = collection(db, "posts");
-      const q = query(collectionRef, orderBy("createdAt", "asc"));
+      const q = query(collectionRef, orderBy("createdAt", "desc"));
       const unsub = onSnapshot(q, (snapshot) => {
         console.log(snapshot.docs);
         setDataGuestBook(
           snapshot.docs.map((doc) => ({
             data: doc.data(),
+            id: doc.id,
           }))
         );
       });
@@ -92,15 +93,17 @@ const GuestBook = () => {
         )}
       </div>
       {/* map cardguestbook with data  */}
-      {dataGuestBook.map((item, index) => (
-        <CardGuestBook
-          createdAt={item.data.createdAt}
-          displayName={item.data.displayName}
-          comment={item.data.comment}
-          key={index}
-          uid={item.data.userId}
-        />
-      ))}
+      {dataGuestBook.map((item, index) => {
+        return (
+          <CardGuestBook
+            createdAt={item.data.createdAt}
+            displayName={item.data.displayName}
+            comment={item.data.comment}
+            key={index}
+            userId={item.data.userId}
+          />
+        );
+      })}
     </div>
   );
 };
