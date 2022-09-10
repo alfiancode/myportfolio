@@ -19,16 +19,17 @@ const FormGuestbook = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const postsRef = collection(db, "posts");
 
   const onCreatePost = async (data) => {
     console.log("data dari fgb", data);
-    const addDocFirebase = await addDoc(postsRef, {
+    const postsRef = collection(db, "posts");
+    const payload = {
       comment: data.comment,
       createdAt: serverTimestamp(),
       userId: user?.uid,
       displayName: user?.displayName,
-    });
+    };
+    const addDocFirebase = await addDoc(postsRef, payload);
     addDocFirebase();
     reset();
   };
