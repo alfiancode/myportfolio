@@ -31,8 +31,8 @@ const FormGuestbook = () => {
     };
     const addDocFirebase = await addDoc(postsRef, payload);
     addDocFirebase();
-    reset();
   };
+
   return (
     <form className="flex " onSubmit={handleSubmit(onCreatePost)}>
       <div className="flex flex-col mr-5">
