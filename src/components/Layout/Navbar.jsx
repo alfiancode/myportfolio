@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar bg-base-200 p-8">
       {/* navbar PHONE */}
       <div className="navbar-start md:hidden ">
-        <div className="dropdown -ml-4">
+        <div className="dropdown -ml-5">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
