@@ -52,7 +52,7 @@ const FeaturedPost = () => {
         Read all posts ➡️
       </a> */}
 
-      <button className="btn btn-outline border-none hover:bg-white hover:text-gray-500 normal-case ">
+      <button className=" -ml-3  btn btn-outline border-none hover:bg-gray-100 hover:text-gray-500 normal-case ">
         {" "}
         Read all posts ➡️
       </button>

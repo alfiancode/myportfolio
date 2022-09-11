@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import FormGuestbook from "../components/FormGuestbook";
 import Title from "../components/Title";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
   const [dataGuestBook, setDataGuestBook] = useState([]);
@@ -83,7 +84,6 @@ const GuestBook = () => {
         ) : (
           <div>
             <p className="my-3 ">
-              {" "}
               Halo <span className="font-bold">{user.displayName}</span> 👋
             </p>
             <div>
