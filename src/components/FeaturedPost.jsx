@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Title from "./Title";
 
 const FeaturedPost = () => {
@@ -51,11 +52,12 @@ const FeaturedPost = () => {
       {/* <a href="#" className="mt-6 text-gray-600  ">
         Read all posts ➡️
       </a> */}
-
-      <button className=" -ml-[18px]  btn btn-outline border-none hover:bg-gray-100 hover:text-gray-500 normal-case ">
-        {" "}
-        Read all posts ➡️
-      </button>
+      <Link to={`/Blog`}>
+        <button className=" -ml-[18px]  btn btn-outline border-none hover:bg-gray-100 hover:text-gray-500 normal-case ">
+          {" "}
+          Read all posts ➡️
+        </button>
+      </Link>
     </div>
   );
 };
