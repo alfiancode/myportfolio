@@ -21,11 +21,12 @@ const Project = () => {
       <Title title="Project" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mx-auto ">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <CardProject
             title={item.title}
             desc={item.desc}
             imageUrl={item.imageUrl}
+            key={index}
           />
         ))}
       </div>
