@@ -1,21 +1,21 @@
 import React from "react";
 
-const ModalProject = ({ title, desc, imageUrl }) => {
+const ModalProject = ({ title, desc, imageUrl, index }) => {
   console.log("tes", { title, desc, imageUrl });
 
   return (
     <>
       {/* <!-- The button to open modal --> */}
-      <label htmlFor="my-modal-3" className="btn modal-button">
+      <label htmlFor={index} className="btn modal-button">
         Details
       </label>
 
       {/* <!-- Put this part before </body> tag --> */}
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+      <input type="checkbox" id={index} className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">
           <label
-            htmlFor="my-modal-3"
+            htmlFor={index}
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕

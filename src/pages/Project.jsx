@@ -27,6 +27,7 @@ const Project = () => {
             desc={item.desc}
             imageUrl={item.imageUrl}
             key={index}
+            index={index}
           />
         ))}
       </div>
