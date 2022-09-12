@@ -1,11 +1,13 @@
 import React from "react";
 
-const ModalProject = ({ title, desc, image }) => {
+const ModalProject = ({ title, desc, imageUrl }) => {
+  console.log("tes", { title, desc, imageUrl });
+
   return (
     <>
       {/* <!-- The button to open modal --> */}
       <label htmlFor="my-modal-3" className="btn modal-button">
-        Detail
+        Details
       </label>
 
       {/* <!-- Put this part before </body> tag --> */}
@@ -19,11 +21,7 @@ const ModalProject = ({ title, desc, image }) => {
             ✕
           </label>
           <h3 className="text-lg font-bold">{title}</h3>
-          <img
-            src="https://i.postimg.cc/W4RD0Cyb/movieapp.png"
-            alt="Shoes"
-            className=" mx-auto"
-          />
+          <img src={imageUrl} alt="Image" className=" mx-auto" />
           <p className="py-4 ">{desc}</p>
         </div>
       </div>
