@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalProject from "./ModalProject";
 
-const CardProject = () => {
+const CardProject = ({ title, desc }) => {
   return (
-    <div className="card mx-auto max-w-sm  bg-base-100 shadow-xl my-5 rounded-xl ">
+    <div className="card  max-w-sm  bg-base-100 shadow-xl my-5 rounded-xl ">
       <figure className="">
         <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">{title}</h2>
+        <p>{desc}</p>
         <div className="card-actions">
-          <button className="btn btn-primary">Detail</button>
+          <ModalProject />
         </div>
       </div>
     </div>

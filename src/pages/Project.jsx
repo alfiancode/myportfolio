@@ -7,10 +7,10 @@ const Project = () => {
     <div className="mx-8">
       <Title title="Project" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mx-auto ">
-        <CardProject />
-        <CardProject />
+        <CardProject title="NewsGame Web" desc="Lorem " />
+        <CardProject title="Movie Web" desc="Lorem " />
 
-        <CardProject />
+        <CardProject title="Personal Project" desc="Lorem " />
       </div>
     </div>
   );
