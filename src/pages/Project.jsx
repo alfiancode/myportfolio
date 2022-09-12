@@ -27,7 +27,7 @@ const Project = () => {
       title: "Resepku (Recipe Web)",
       desc: "I created this project using the Public API. This project is a recipe web that displays the latest recipe information.The feature I made is   Sign In and Sign Up, protected Page if not logged in, 404 page if URL doesn't exist,Responsive design.Some of the web front end technologies I use are ReactJs, Firebase, MaterialUi, React-Router, React Custom Hooks, Axios",
       imageUrl: "https://i.postimg.cc/Qtwbm3s9/Screenshot-22.png",
-      link: "",
+      link: "https://152235865100543-dts-final-project.vercel.app/",
     },
   ];
   return (
