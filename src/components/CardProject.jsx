@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ModalProject from "./ModalProject";
 
-const CardProject = ({ title, desc, imageUrl, index }) => {
-  console.log({ title, desc, imageUrl });
+const CardProject = ({ title, desc, imageUrl, index, link }) => {
   return (
     <div className="card  max-w-sm  bg-base-100 shadow-xl my-5 rounded-xl ">
       <figure className="">
@@ -17,6 +16,7 @@ const CardProject = ({ title, desc, imageUrl, index }) => {
             desc={desc}
             imageUrl={imageUrl}
             index={index}
+            link={link}
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ModalProject = ({ title, desc, imageUrl, index }) => {
+const ModalProject = ({ title, desc, imageUrl, index, link }) => {
   console.log("tes", { title, desc, imageUrl });
 
   return (
@@ -22,7 +23,16 @@ const ModalProject = ({ title, desc, imageUrl, index }) => {
           </label>
           <h3 className="text-lg font-bold">{title}</h3>
           <img src={imageUrl} alt="Image" className=" mx-auto" />
-          <p className="py-4 ">{desc}</p>
+          <button className="btn btn-sm mt-5">
+            {" "}
+            <a href={link} target="_blank">
+              Vist This Website 🔎
+            </a>
+          </button>
+
+          <div className="flex">
+            <p className="py-4 text-left">{desc}</p>
+          </div>
         </div>
       </div>
     </>
