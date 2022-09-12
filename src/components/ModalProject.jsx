@@ -19,7 +19,12 @@ const ModalProject = ({ title, desc, image }) => {
             ✕
           </label>
           <h3 className="text-lg font-bold">{title}</h3>
-          <p className="py-4">{desc}</p>
+          <img
+            src="https://i.postimg.cc/W4RD0Cyb/movieapp.png"
+            alt="Shoes"
+            className=" mx-auto"
+          />
+          <p className="py-4 ">{desc}</p>
         </div>
       </div>
     </>
