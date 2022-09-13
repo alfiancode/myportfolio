@@ -1,5 +1,5 @@
 import { deleteDoc, doc } from "firebase/firestore";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../config/Firebase";
 import Toast from "./Toast";
@@ -20,10 +20,23 @@ const CardGuestBook = ({ displayName, createdAt, comment, userId, idPost }) => {
     }
   };
   // end delete post with firebase
+
+  //   hide toast with handleClick setTimeout useEffect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [Success]);
+
+  // set time out toast
+
   return (
     <div className="my-5 ">
       {/* toast componen on top mid  */}
-      {Success === true && <Toast />}
+      <div className={Success ? "" : "hidden"}>
+        {Success === true && <Toast />}
+      </div>
 
       <div className="mb-4 w-full font-light">{comment}</div>
       <div className="flex ">
