@@ -6,6 +6,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import FormGuestbook from "../components/FormGuestbook";
 import Title from "../components/Title";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import { success } from "daisyui/src/colors/colorNames";
+import Toast from "../components/Toast";
 
 const GuestBook = () => {
   const [user, isLoading] = useAuthState(auth);
@@ -28,7 +30,6 @@ const GuestBook = () => {
       const collectionRef = collection(db, "posts");
       const q = query(collectionRef, orderBy("createdAt", "desc"));
       const unsub = onSnapshot(q, (snapshot) => {
-        console.log(snapshot.docs);
         setDataGuestBook(
           snapshot.docs.map((doc) => ({
             data: doc.data(),
@@ -101,6 +102,7 @@ const GuestBook = () => {
             comment={item.data.comment}
             key={index}
             userId={item.data.userId}
+            idPost={item.id}
           />
         );
       })}
