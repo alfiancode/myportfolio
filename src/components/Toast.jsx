@@ -4,11 +4,6 @@ const Toast = () => {
   const [show, setShow] = useState(false);
 
   //   hide toast with handleClick setTimeout
-  const handleClick = () => {
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
-  };
 
   return (
     <>

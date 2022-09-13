@@ -7,7 +7,7 @@ const Banner = () => {
         <h1 className="font-bold text-3xl mb-1 tracking-tight md:text-5xl">
           Muhamamd AlfianS
         </h1>
-        <p className="text-gray-700 mb-4">Frontend Developer</p>
+        <p className="text-gray-700 mb-4 flex">Frontend Developer</p>
         <p className="text-gray-400 ">
           Build a responsive website from the heart for you.
         </p>
