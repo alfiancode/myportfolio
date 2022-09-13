@@ -46,7 +46,7 @@ const GuestBook = () => {
   // end use state for data guest book with firebase snapshot
 
   return (
-    <div className="mx-8">
+    <div className="mx-8 relative">
       <Title title=" 📝 Guestbook" />
       <p className=" mb-6">
         Leave a comment below. It could be anything – appreciation, information,

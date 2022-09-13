@@ -21,9 +21,9 @@ const CardGuestBook = ({ displayName, createdAt, comment, userId, idPost }) => {
   };
   // end delete post with firebase
   return (
-    <div className="my-5">
+    <div className="my-5 ">
       {/* toast componen on top mid  */}
-      <div className="relative top-14 ">{Success === true && <Toast />}</div>
+      {Success === true && <Toast />}
 
       <div className="mb-4 w-full font-light">{comment}</div>
       <div className="flex ">
