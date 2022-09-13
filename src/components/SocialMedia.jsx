@@ -5,12 +5,13 @@ const SocialMedia = () => {
   return (
     <div className="my-8">
       <Title title="🧔🏻Social Media" />
-      <div className="flex flex-col justify-center w-full max-w-xs">
+      <div className="flex flex-col md:flex-row md:flex-wrap md:justify-between  gap-4 justify-center  w-full">
         <a
           href="https://www.linkedin.com/in/muhammadalfiansyah/"
           target="_blank"
+          className="w-full md:max-w-xs"
         >
-          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl  p-5 ">
             <img
               src="https://img.icons8.com/color/48/000000/linkedin.png"
               alt="linkedin"
@@ -21,8 +22,12 @@ const SocialMedia = () => {
             </p>
           </div>
         </a>
-        <a href="https://www.github.com/alfiancode" target="_blank">
-          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+        <a
+          className="w-full md:max-w-xs"
+          href="https://www.github.com/alfiancode"
+          target="_blank"
+        >
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl  p-5">
             <img
               src="https://img.icons8.com/color/48/000000/github.png"
               alt="github"
@@ -33,8 +38,12 @@ const SocialMedia = () => {
             </p>
           </div>
         </a>
-        <a href="https://www.Instagram.com/alfi.an" target="_blank">
-          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+        <a
+          href="https://www.Instagram.com/alfi.an"
+          target="_blank"
+          className="w-full md:max-w-xs"
+        >
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl  p-5">
             <img
               src="https://img.icons8.com/color/48/000000/instagram-new.png"
               alt="github"
@@ -45,8 +54,12 @@ const SocialMedia = () => {
             </p>
           </div>
         </a>
-        <a href="https://www.Twitter.com/alpyian" target="_blank">
-          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+        <a
+          href="https://www.Twitter.com/alpyian"
+          target="_blank"
+          className="w-full md:max-w-xs"
+        >
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl  p-5">
             <img
               src="https://img.icons8.com/color/48/000000/twitter.png"
               alt="Twittwer"
