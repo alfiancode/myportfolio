@@ -6,6 +6,21 @@ const SocialMedia = () => {
     <div className="my-8">
       <Title title="🧔🏻Social Media" />
       <div className="flex flex-col justify-center w-full max-w-xs">
+        <a
+          href="https://www.linkedin.com/in/muhammadalfiansyah/"
+          target="_blank"
+        >
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+            <img
+              src="https://img.icons8.com/color/48/000000/linkedin.png"
+              alt="linkedin"
+              className=""
+            />
+            <p className="ml-7 group-hover:text-blue-500 font-bold text-xs">
+              https://www.linkedin.com/alfian/
+            </p>
+          </div>
+        </a>
         <a href="https://www.github.com/alfiancode" target="_blank">
           <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
             <img
@@ -26,7 +41,19 @@ const SocialMedia = () => {
               className=""
             />
             <p className="ml-7 group-hover:text-blue-500 font-bold">
-              Github.com/alfiancode
+              Instagram.com/alfi.an
+            </p>
+          </div>
+        </a>
+        <a href="https://www.Twitter.com/alpyian" target="_blank">
+          <div className=" group flex items-center hover:scale-105 duration-500 ring-1 ring-gray-900 rounded-xl mb-4 p-5">
+            <img
+              src="https://img.icons8.com/color/48/000000/twitter.png"
+              alt="Twittwer"
+              className=""
+            />
+            <p className="ml-7 group-hover:text-blue-500 font-bold">
+              Twitter.com/alpyian
             </p>
           </div>
         </a>
