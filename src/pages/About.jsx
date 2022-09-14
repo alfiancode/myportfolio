@@ -17,10 +17,10 @@ const About = () => {
           <code className="">now living in Jakarta.Id</code>
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">Working 9 to 5 in the tax office</code>
+          =
         </pre>
         <pre data-prefix=">" className="font-serif">
-          <code className="">become a front end developer at night</code>
+          <code className="">become a front end developer 24/7</code>
         </pre>
         <pre data-prefix=">" className="font-serif">
           <code className="">write code from heart ❤️</code>
