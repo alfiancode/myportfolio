@@ -24,6 +24,7 @@ const Tailwind = () => {
           </svg>
         </div>
         <div className="mt-8 prose prose-pink mx-auto lg:prose-lg prose-blockquote:bg-gray-100 prose-headings:text-blue-400">
+          <h1>Markdown</h1>
           <p className="lead">
             Until now, trying to style an article, document, or blog post with
             Tailwind has been a tedious task that required a keen eye for

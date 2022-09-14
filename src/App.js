@@ -8,6 +8,7 @@ import GuestBook from "./pages/GuestBook";
 import Blog from "./pages/Blog";
 import Project from "./pages/Project";
 import Tailwind from "./pages/markdown/Tailwind";
+import LayoutMarkdown from "./pages/markdown/LayoutMarkdown";
 function App() {
   return (
     <div>
@@ -59,6 +60,15 @@ function App() {
           element={
             <Layout>
               <Tailwind />
+            </Layout>
+          }
+        />
+        {/* route for every blog  */}
+        <Route
+          path="/blog/:id"
+          element={
+            <Layout>
+              <LayoutMarkdown />
             </Layout>
           }
         />

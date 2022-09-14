@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Title from "./Title";
 import { db } from "../config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 //get data with snapshot from firebase
 const FeaturedPost = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -18,15 +19,22 @@ const FeaturedPost = () => {
     };
     getData();
   }, []);
+  //handle click to layout markdown page with id
+  const handleClick = (id) => {
+    navigate(`/blog/${id}`);
+  };
 
   return (
     <div>
       <Title title=" 💡Featured Post" />
       {/* card  */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {/* looping card with data from fire base */}
         {data.map((item, index) => (
-          <div className="flex  flex-col md:flex-row gap-5 md:h-64  ">
+          <div
+            className="flex  flex-col md:flex-row gap-5 md:h-64  "
+            onClick={() => handleClick(item.id)}
+          >
             <div className="  transform hover:scale-[1.02] transition-all rounded-xl w-full   h-full mx-auto bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
               <div className="flex flex-col justify-between h-full bg-white  rounded-lg p-5 overflow-hidden">
                 <h4 className="text-lg font-medium mb-6 sm:mb-10 tracking-tight text-gray-900">
