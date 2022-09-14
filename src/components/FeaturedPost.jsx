@@ -3,26 +3,36 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import Title from "./Title";
 import { db } from "../config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Loading from "./Loading";
 
 //get data with snapshot from firebase
 const FeaturedPost = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getData = async () => {
+      setLoading(true);
       const querySnapshot = await getDocs(collection(db, "Blog"));
       const data = querySnapshot.docs.map((doc) => ({
         data: doc.data(),
         id: doc.id,
       }));
       setData(data);
+      setLoading(false);
     };
+
     getData();
   }, []);
   //handle click to layout markdown page with id
   const handleClick = (id) => {
     navigate(`/blog/${id}`);
   };
+
+  // handle if data is empty loading
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div>
@@ -48,7 +58,6 @@ const FeaturedPost = () => {
           </div>
         ))}
       </div>
-
       {/* end card */}
       {/* <a href="#" className="mt-6 text-gray-600  ">
         Read all posts ➡️
