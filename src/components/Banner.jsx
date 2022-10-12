@@ -17,7 +17,7 @@ const Banner = () => {
       </div>
       <div className="avatar mb-8 sm:mx-auto">
         <div className="w-16 h-16 sm:w-32 sm:h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-          <img src="https://placeimg.com/192/192/people" />
+          <img src="https://iili.io/ZJm0YJ.jpg" alt="ZJm0YJ.jpg" />
         </div>
       </div>
     </div>

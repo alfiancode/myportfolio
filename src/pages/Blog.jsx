@@ -30,11 +30,6 @@ const Blog = () => {
       </div>
       <div className="divider my-16 font-bold"> 💖Happy reading</div>
       <BlogCard slug="tailwindcss" />
-      <BlogCard />
-
-      <BlogCard />
-
-      <BlogCard />
     </div>
   );
 };
